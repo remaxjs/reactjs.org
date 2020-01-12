@@ -8,10 +8,10 @@
 
 module.exports = {
   siteMetadata: {
-    title: 'React: A JavaScript library for building user interfaces',
-    siteUrl: 'https://reactjs.org',
-    rssFeedTitle: 'React',
-    rssFeedDescription: 'A JavaScript library for building user interfaces',
+    title: 'Remax: 全新的小程序开发体验',
+    siteUrl: 'https://remaxjs.org',
+    rssFeedTitle: 'Remax',
+    rssFeedDescription: 'Remax: 全新的小程序开发体验',
   },
   mapping: {
     'MarkdownRemark.frontmatter.author': 'AuthorYaml',
@@ -165,7 +165,7 @@ module.exports = {
         name: 'React Docs',
         short_name: 'React', // eg. React [%LANG_CODE%]
         // Translators: please change this and two above options (see https://www.gatsbyjs.org/packages/gatsby-plugin-manifest/#feature-configuration---optional)
-        lang: 'en',
+        lang: 'zh',
         start_url: '/',
         background_color: '#20232a',
         theme_color: '#20232a',

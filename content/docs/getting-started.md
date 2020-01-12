@@ -20,7 +20,7 @@ redirect_from:
 
 This page is an overview of the React documentation and related resources.
 
-**React** is a JavaScript library for building user interfaces. Learn what React is all about on [our homepage](/) or [in the tutorial](/tutorial/tutorial.html).
+**Remax** 是一个基于 React 的小程序开发框架. Learn what React is all about on [our homepage](/) or [in the tutorial](/tutorial/tutorial.html).
 
 ---
 

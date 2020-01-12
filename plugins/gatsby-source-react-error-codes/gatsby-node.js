@@ -1,13 +1,8 @@
-const request = require('request-promise');
-
-const errorCodesUrl =
-  'https://raw.githubusercontent.com/facebook/react/master/scripts/error-codes/codes.json';
-
 exports.sourceNodes = async ({actions}) => {
   const {createNode} = actions;
 
   try {
-    const jsonString = await request(errorCodesUrl);
+    const jsonString = JSON.stringify(require('./codes.json'));
 
     createNode({
       id: 'error-codes',

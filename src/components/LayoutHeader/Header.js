@@ -17,7 +17,7 @@ import DocSearch from './DocSearch';
 // $FlowFixMe
 import navHeader from '../../../content/headerNav.yml';
 
-import logoSvg from 'icons/logo.svg';
+import logoSvg from 'icons/remax-white.png';
 
 const Header = ({location}: {location: Location}) => (
   <header
@@ -92,7 +92,7 @@ const Header = ({location}: {location: Location}) => (
                 border: 0,
               },
             }}>
-            React
+            Remax
           </span>
         </Link>
 
@@ -175,37 +175,7 @@ const Header = ({location}: {location: Location}) => (
             to="/versions">
             v{version}
           </Link>
-          <Link
-            css={{
-              display: 'flex',
-              alignItems: 'center',
-              padding: '5px 10px',
-              whiteSpace: 'nowrap',
-              ...fonts.small,
 
-              ':hover': {
-                color: colors.brand,
-              },
-
-              ':focus': {
-                outline: 0,
-                backgroundColor: colors.lighter,
-                borderRadius: 15,
-              },
-            }}
-            to="/languages">
-            <LanguagesIcon />{' '}
-            <span
-              css={{
-                marginLeft: '0.5rem',
-
-                [media.lessThan('medium')]: {
-                  display: 'none',
-                },
-              }}>
-              Languages
-            </span>
-          </Link>
           <a
             css={{
               padding: '5px 10px',
@@ -227,7 +197,7 @@ const Header = ({location}: {location: Location}) => (
                 display: 'none',
               },
             }}
-            href="https://github.com/facebook/react/"
+            href="https://github.com/remaxjs/remax/"
             target="_blank"
             rel="noopener">
             GitHub
