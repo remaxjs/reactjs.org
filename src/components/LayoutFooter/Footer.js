@@ -12,15 +12,13 @@ import FooterNav from './FooterNav';
 import MetaTitle from 'templates/components/MetaTitle';
 import SectionLinks from './SectionLinks';
 import React from 'react';
-import {colors, media} from 'theme';
-import {sectionListCommunity, sectionListDocs} from 'utils/sectionList';
+import { colors, media } from 'theme';
+import { sectionListCommunity, sectionListDocs } from 'utils/sectionList';
 
 // $FlowFixMe
 import navFooter from '../../../content/footerNav.yml';
 
-import ossLogoPng from 'images/oss_logo.png';
-
-const Footer = ({layoutHasSidebar = false}: {layoutHasSidebar: boolean}) => (
+const Footer = ({ layoutHasSidebar = false }: { layoutHasSidebar: boolean }) => (
   <footer
     css={{
       backgroundColor: colors.darker,
@@ -34,7 +32,8 @@ const Footer = ({layoutHasSidebar = false}: {layoutHasSidebar: boolean}) => (
       '@media print': {
         display: 'none',
       },
-    }}>
+    }}
+  >
     <Container>
       <div
         css={{
@@ -52,7 +51,8 @@ const Footer = ({layoutHasSidebar = false}: {layoutHasSidebar: boolean}) => (
           [media.between('largerSidebar', 'sidebarFixed', true)]: {
             paddingRight: layoutHasSidebar ? 380 : null,
           },
-        }}>
+        }}
+      >
         <div
           css={{
             flexWrap: 'wrap',
@@ -65,15 +65,14 @@ const Footer = ({layoutHasSidebar = false}: {layoutHasSidebar: boolean}) => (
               width: 'calc(100% / 3 * 2)',
               paddingLeft: 40,
             },
-          }}>
+          }}
+        >
           <FooterNav layoutHasSidebar={layoutHasSidebar}>
             <MetaTitle onDark={true}>{navFooter.docs.title}</MetaTitle>
             {sectionListDocs.map(section => {
               const defaultItem = section.items[0];
               return (
-                <FooterLink
-                  to={`/docs/${defaultItem.id}.html`}
-                  key={section.title}>
+                <FooterLink to={`/docs/${defaultItem.id}.html`} key={section.title}>
                   {section.title}
                 </FooterLink>
               );
@@ -85,14 +84,11 @@ const Footer = ({layoutHasSidebar = false}: {layoutHasSidebar: boolean}) => (
           </FooterNav>
           <FooterNav layoutHasSidebar={layoutHasSidebar}>
             <MetaTitle onDark={true}>{navFooter.community.title}</MetaTitle>
-            <ExternalFooterLink
-              href={`https://github.com/facebook/react/blob/master/CODE_OF_CONDUCT.md`}>
+            <ExternalFooterLink href={`https://github.com/facebook/react/blob/master/CODE_OF_CONDUCT.md`}>
               Code of Conduct
             </ExternalFooterLink>
             {sectionListCommunity.map(section => (
-              <FooterLink
-                to={`/community/${section.items[0].id}.html`}
-                key={section.title}>
+              <FooterLink to={`/community/${section.items[0].id}.html`} key={section.title}>
                 {section.title}
               </FooterLink>
             ))}
@@ -102,46 +98,6 @@ const Footer = ({layoutHasSidebar = false}: {layoutHasSidebar: boolean}) => (
             <SectionLinks links={navFooter.more.items} />
           </FooterNav>
         </div>
-        <section
-          css={{
-            paddingTop: 40,
-            display: 'block !important', // Override 'Installation' <style> specifics
-
-            [media.greaterThan('xlarge')]: {
-              width: 'calc(100% / 3)',
-              order: -1,
-            },
-            [media.greaterThan('large')]: {
-              order: -1,
-              width: layoutHasSidebar ? null : 'calc(100% / 3)',
-            },
-            [media.lessThan('large')]: {
-              textAlign: 'center',
-              width: '100%',
-              paddingTop: 40,
-            },
-          }}>
-          <a
-            href="https://code.facebook.com/projects/"
-            target="_blank"
-            rel="noopener">
-            <img
-              alt="Facebook Open Source"
-              css={{
-                maxWidth: 160,
-                height: 'auto',
-              }}
-              src={ossLogoPng}
-            />
-          </a>
-          <p
-            css={{
-              color: colors.subtleOnDark,
-              paddingTop: 15,
-            }}>
-            {`Copyright © ${new Date().getFullYear()} Facebook Inc.`}
-          </p>
-        </section>
       </div>
     </Container>
   </footer>

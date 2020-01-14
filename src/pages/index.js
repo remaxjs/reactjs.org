@@ -50,7 +50,7 @@ class Home extends Component {
     return (
       <Layout location={location}>
         <TitleAndMetaTags
-          title="Remax &ndash; 全新的小程序开发体验"
+          title="Remax &ndash; 使用真正的 React 构建小程序"
           canonicalUrl={createCanonicalUrl('/')}
         />
         <div css={{width: '100%'}}>
@@ -133,7 +133,7 @@ class Home extends Component {
                         fontSize: 30,
                       },
                     }}>
-                    全新的小程序开发体验
+                    使用真正的 React 构建小程序
                   </p>
                   <Flex
                     valign="center"

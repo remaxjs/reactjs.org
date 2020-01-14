@@ -8,10 +8,10 @@
 
 module.exports = {
   siteMetadata: {
-    title: 'Remax: 全新的小程序开发体验',
+    title: 'Remax: 使用真正的 React 构建小程序',
     siteUrl: 'https://remaxjs.org',
     rssFeedTitle: 'Remax',
-    rssFeedDescription: 'Remax: 全新的小程序开发体验',
+    rssFeedDescription: 'Remax: 使用真正的 React 构建小程序',
   },
   mapping: {
     'MarkdownRemark.frontmatter.author': 'AuthorYaml',
